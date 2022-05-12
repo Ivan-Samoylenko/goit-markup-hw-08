@@ -6,18 +6,37 @@
 }
 
 .contacts--header {
-  display: flex;
+  display: none;
+
+  @media screen and (min-width: $container-width-tablet) {
+    display: inline-block;
+  }
+  @media screen and (min-width: $container-width-desctop) {
+    display: flex;
+  }
 }
 
 .contacts__header-item {
+  &:nth-last-child(n + 2) {
+    @media screen and (min-width: $container-width-tablet) and (max-width: ($container-width-desctop - 1px)) {
+      margin-bottom: 10px;
+    }
+  }
+
   &:nth-child(n + 2) {
-    margin-left: 50px;
+    @media screen and (min-width: $container-width-desctop) {
+      margin-left: 50px;
+    }
   }
 }
 
 .contacts__footer-item {
   &:nth-last-child(n + 2) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $container-width-desctop) {
+      margin-bottom: 9px;
+    }
   }
 }
 

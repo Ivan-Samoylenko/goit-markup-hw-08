@@ -5,14 +5,23 @@
 }
 
 .page-header__container {
+  min-height: 59px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (min-width: $container-width-tablet) {
+    min-height: 79px;
+  }
 }
 
 .page-header__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  display: flex;
+  @media screen and (min-width: $container-width-tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $container-width-desctop) {
+    padding-top: 32px;
+    padding-bottom: 31px;
+  }
 }
