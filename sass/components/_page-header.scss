@@ -1,0 +1,18 @@
+.page-header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $header-border-color;
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  display: flex;
+}

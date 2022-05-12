@@ -1,0 +1,18 @@
+body {
+  font-family: 'roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: $grey-primary-color;
+  background-color: $white-primary-color;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  display: block;
+}
