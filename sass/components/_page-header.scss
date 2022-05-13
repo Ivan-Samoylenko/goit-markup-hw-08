@@ -18,10 +18,18 @@
 
 .page-header__link {
   @media screen and (min-width: $container-width-tablet) {
-    display: flex;
-  }
-  @media screen and (min-width: $container-width-desctop) {
     padding-top: 32px;
     padding-bottom: 31px;
+
+    display: flex;
+  }
+}
+
+.page-header__contacts-link {
+  @media screen and (min-width: $container-width-tablet) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    display: flex;
   }
 }

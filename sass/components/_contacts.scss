@@ -17,12 +17,6 @@
 }
 
 .contacts__header-item {
-  &:nth-last-child(n + 2) {
-    @media screen and (min-width: $container-width-tablet) and (max-width: ($container-width-desctop - 1px)) {
-      margin-bottom: 10px;
-    }
-  }
-
   &:nth-child(n + 2) {
     @media screen and (min-width: $container-width-desctop) {
       margin-left: 50px;

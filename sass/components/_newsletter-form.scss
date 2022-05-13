@@ -1,16 +1,15 @@
 .newsletter-form {
-  max-width: 450px;
-  width: 100%;
-
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: ($container-width-tablet - 1px)) {
+  @media screen and (max-width: ($container-width-desctop - 1px)) {
     flex-direction: column;
   }
 }
 
 .newsletter-form__input {
+  width: 100%;
+  max-width: 450px;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -27,7 +26,11 @@
     color: $white-primary-opacity-color;
   }
 
-  @media screen and (min-width: $container-width-tablet) {
+  @media screen and (max-width: ($container-width-desctop - 1px)) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $container-width-desctop) {
     margin-right: 12px;
   }
 }
