@@ -1,18 +1,27 @@
 .features {
-  margin-top: calc(-1 * 30px);
-  margin-left: calc(-1 * 30px);
+  margin-top: -30px;
 
-  display: flex;
+  @media screen and (min-width: $container-width-tablet) {
+    margin-left: -30px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .features__item {
-  width: calc(100% / 4 - 30px);
   margin-top: 30px;
-  margin-left: 30px;
+
+  @media screen and (min-width: $container-width-tablet) {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @media screen and (min-width: $container-width-desctop) {
+    width: calc(100% / 4 - 30px);
+  }
 }
 
 .features__icon-thumb {
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -33,6 +42,10 @@
   text-transform: uppercase;
 
   color: $grey-secondary-color;
+
+  @media screen and (max-width: ($container-width-tablet - 1px)) {
+    text-align: center;
+  }
 }
 
 .features__text {

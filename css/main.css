@@ -52,25 +52,49 @@ svg {
 
 /* END visualy-hidden */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.section--no-bottom {
-  padding-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section--no-top {
+  padding-top: 0;
 }
 
 .section--gray {
   background-color: #f5f4fa;
 }
 
+.section--desctop {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .section--desctop {
+    display: block;
+  }
+}
+
 .section__title {
   margin-top: 0;
-  margin-bottom: 50px;
-  font-size: 36px;
+  margin-bottom: 30px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .container {
@@ -232,9 +256,16 @@ svg {
   display: inline-block;
   font-family: 'raleway';
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo__studio {
@@ -579,21 +610,38 @@ svg {
 }
 
 .features {
-  margin-top: calc(-1 * 30px);
-  margin-left: calc(-1 * 30px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .features {
+    margin-left: -30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .features__item {
-  width: calc(100% / 4 - 30px);
   margin-top: 30px;
-  margin-left: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: calc(100% / 4 - 30px);
+  }
 }
 
 .features__icon-thumb {
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -616,6 +664,12 @@ svg {
   line-height: 1.14;
   text-transform: uppercase;
   color: #212121;
+}
+
+@media screen and (max-width: 767px) {
+  .features__title {
+    text-align: center;
+  }
 }
 
 .features__text {
