@@ -74,6 +74,23 @@
   }
 }
 
+.button--menu-burger {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  color: $black-primary-color;
+  background-color: $white-primary-color;
+  cursor: pointer;
+
+  transition: color $primary-animation;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
 .button__icon {
   fill: currentColor;
 }

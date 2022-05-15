@@ -50,10 +50,7 @@
         <!-- contacts -->
         <ul class="list contacts contacts--header">
           <li class="contacts__header-item">
-            <a
-              class="link page-header__contacts-link contacts__link"
-              href="mailto:info@devstudio.com"
-            >
+            <a class="link contacts__link contacts__link--flex" href="mailto:info@devstudio.com">
               <svg class="contacts__icon contacts__icon--start" width="16" height="12">
                 <use href="./images/icons.svg#header-mail"></use>
               </svg>
@@ -63,7 +60,7 @@
           </li>
 
           <li class="contacts__header-item">
-            <a class="link page-header__contacts-link contacts__link" href="tel:+380961111111">
+            <a class="link contacts__link contacts__link--flex" href="tel:+380961111111">
               <svg class="contacts__icon contacts__icon--start" width="10" height="16">
                 <use href="./images/icons.svg#header-tel"></use>
               </svg>
@@ -72,19 +69,78 @@
             </a>
           </li>
         </ul>
+
+        <!-- mobile menu burger button -->
+        <button
+          class="button button--menu-burger page-header__menu-burger"
+          type="button"
+          data-menu-open
+        >
+          <svg width="20" height="20">
+            <use class="button__icon" href="./images/icons.svg#menu-burger"></use>
+          </svg>
+        </button>
+
+        <!-- mobile menu -->
+        <div class="page-header__mobile-menu is-hidden" data-menu>
+          <div class="container">
+            <!-- menu close button -->
+            <button
+              class="button button--menu-burger page-header__menu-close"
+              type="button"
+              data-menu-close
+            >
+              <svg width="20" height="20">
+                <use class="button__icon" href="./images/icons.svg#btn-x"></use>
+              </svg>
+            </button>
+
+            <!-- list of links to website pages -->
+            <nav class="mobile-navigate">
+              <ul class="list mobile-navigate__list">
+                <li class="mobile-navigate__item">
+                  <a class="link mobile-navigate_link" href="./index.html"> Студия </a>
+                </li>
+
+                <li class="mobile-navigate__item">
+                  <a class="link mobile-navigate_link" href="./portfolio.html">Портфолио</a>
+                </li>
+
+                <li class="mobile-navigate__item">
+                  <a class="link mobile-navigate_link" href="">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- contacts -->
+            <ul class="list mobile-contacts">
+              <li class="mobile-contacts__item">
+                <a class="link mobile-contacts__link" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+
+              <li class="mobile-contacts__item">
+                <a class="link mobile-contacts__link" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Main content -->
     <main>
       <!-- block hero -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button class="button button--primary" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
-      </section> -->
+      </section>
 
       <!-- features of the studio -->
       <section class="section">
@@ -177,12 +233,18 @@
       </section>
 
       <!-- our team -->
-      <!-- <section class="section section--gray">
+      <section class="section section--gray">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="list team">
             <li class="team__item">
-              <img src="./images/team-1-igor.jpg" alt="Игорь" width="270" height="260" />
+              <img
+                class="team__image"
+                src="./images/team-1-igor.jpg"
+                alt="Игорь"
+                width="270"
+                height="260"
+              />
               <div class="team__content">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__text">Product Designer</p>
@@ -219,7 +281,13 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/team-2-olga.jpg" alt="Ольга" width="270" height="260" />
+              <img
+                class="team__image"
+                src="./images/team-2-olga.jpg"
+                alt="Ольга"
+                width="270"
+                height="260"
+              />
               <div class="team__content">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__text">Frontend Developer</p>
@@ -256,7 +324,13 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/team-3-nikolai.jpg" alt="Николай" width="270" height="260" />
+              <img
+                class="team__image"
+                src="./images/team-3-nikolai.jpg"
+                alt="Николай"
+                width="270"
+                height="260"
+              />
               <div class="team__content">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__text">Marketing</p>
@@ -293,7 +367,13 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/team-4-michail.jpg" alt="Михаил" width="270" height="260" />
+              <img
+                class="team__image"
+                src="./images/team-4-michail.jpg"
+                alt="Михаил"
+                width="270"
+                height="260"
+              />
               <div class="team__content">
                 <h3 class="team__title">Михаил Ермаков</h3>
                 <p class="team__text">UI Designer</p>
@@ -331,7 +411,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- regular customers -->
       <section class="section">
@@ -552,5 +632,7 @@
 
     <!-- modal script -->
     <script src="./js/modal.js"></script>
+    <!-- header menu burger script -->
+    <script src="./js/header-menu.js"></script>
   </body>
 </html>
