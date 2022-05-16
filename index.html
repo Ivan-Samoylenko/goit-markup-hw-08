@@ -82,11 +82,11 @@
         </button>
 
         <!-- mobile menu -->
-        <div class="page-header__mobile-menu is-hidden" data-menu>
-          <div class="container">
+        <div class="mobile-menu is-hidden" data-menu>
+          <div class="container mobile-menu__container">
             <!-- menu close button -->
             <button
-              class="button button--menu-burger page-header__menu-close"
+              class="button button--menu-burger mobile-menu__menu-close"
               type="button"
               data-menu-close
             >
@@ -96,36 +96,63 @@
             </button>
 
             <!-- list of links to website pages -->
-            <nav class="mobile-navigate">
-              <ul class="list mobile-navigate__list">
-                <li class="mobile-navigate__item">
-                  <a class="link mobile-navigate_link" href="./index.html"> Студия </a>
+            <nav class="mobile-menu__navigate">
+              <ul class="list mobile-menu__navigate-list">
+                <li class="mobile-menu__navigate-item">
+                  <a
+                    class="link mobile-menu__navigate-link mobile-menu__navigate-link--current"
+                    href="./index.html"
+                  >
+                    Студия
+                  </a>
                 </li>
 
-                <li class="mobile-navigate__item">
-                  <a class="link mobile-navigate_link" href="./portfolio.html">Портфолио</a>
+                <li class="mobile-menu__navigate-item">
+                  <a class="link mobile-menu__navigate-link" href="./portfolio.html">Портфолио</a>
                 </li>
 
-                <li class="mobile-navigate__item">
-                  <a class="link mobile-navigate_link" href="">Контакты</a>
+                <li class="mobile-menu__navigate-item">
+                  <a class="link mobile-menu__navigate-link" href="">Контакты</a>
                 </li>
               </ul>
             </nav>
 
-            <!-- contacts -->
-            <ul class="list mobile-contacts">
-              <li class="mobile-contacts__item">
-                <a class="link mobile-contacts__link" href="mailto:info@devstudio.com">
-                  info@devstudio.com
-                </a>
-              </li>
+            <!-- bottom of mobile menu -->
+            <div class="mobile-menu__bottom">
+              <!-- contacts -->
+              <ul class="list mobile-menu__contacts-list">
+                <li class="mobile-menu__contacts-item">
+                  <a
+                    class="link mobile-menu__contacts-link mobile-menu__contacts-link--big"
+                    href="mailto:info@devstudio.com"
+                  >
+                    info@devstudio.com
+                  </a>
+                </li>
 
-              <li class="mobile-contacts__item">
-                <a class="link mobile-contacts__link" href="tel:+380961111111">
-                  +38 096 111 11 11
-                </a>
-              </li>
-            </ul>
+                <li class="mobile-menu__contacts-item">
+                  <a class="link mobile-menu__contacts-link" href="tel:+380961111111">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+
+              <!-- mobile socials -->
+              <ul class="list mobile-menu__socials-list">
+                <li class="mobile-menu__socials-item">
+                  <a class="link mobile-menu__socials-link" href="">Instagram</a>
+                </li>
+                <li class="mobile-menu__socials-item">
+                  <a class="link mobile-menu__socials-link" href="">Twitter</a>
+                </li>
+                <li class="mobile-menu__socials-item">
+                  <a class="link mobile-menu__socials-link" href="">Facebook</a>
+                </li>
+                <li class="mobile-menu__socials-item">
+                  <a class="link mobile-menu__socials-link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -620,8 +647,10 @@
               </svg>
             </span>
 
-            Соглашаюсь с рассылкой и принимаю&nbsp;
-            <a class="order-form__form-link" href="">Условия договора</a>
+            <span class="order-form__checkbox-label">
+              Соглашаюсь с рассылкой и принимаю
+              <a class="order-form__form-link" href="">Условия договора</a>
+            </span>
           </label>
 
           <!-- submit button -->
@@ -633,6 +662,6 @@
     <!-- modal script -->
     <script src="./js/modal.js"></script>
     <!-- header menu burger script -->
-    <script src="./js/header-menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

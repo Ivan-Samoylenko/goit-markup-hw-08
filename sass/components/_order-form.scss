@@ -11,10 +11,14 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
 
   color: $grey-secondary-color;
+
+  @media screen and (min-width: $container-width-desctop) {
+    line-height: 1.15;
+  }
 }
 
 .order-form__field {
@@ -49,14 +53,18 @@
   padding-right: 12px;
   padding-left: 42px;
 
-  font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: $grey-secondary-color;
 
   transition: border-color $primary-animation;
 
   outline: none;
+
+  @media screen and (min-width: $container-width-desctop) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .order-form__field:focus-within .order-form__input {
@@ -91,6 +99,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: ($container-width-desctop - 1px)) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .order-form__check {
@@ -132,6 +145,10 @@
 
 .order-form__checkbox-icon {
   fill: currentColor;
+}
+
+.order-form__checkbox-label {
+  white-space: none;
 }
 
 .order-form__form-link {

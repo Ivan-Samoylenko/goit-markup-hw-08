@@ -31,38 +31,3 @@
     display: none;
   }
 }
-
-.page-header__mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100vw;
-  height: 100vh;
-  padding-top: 48px;
-  padding-right: 25px;
-  padding-bottom: 48px;
-  padding-left: 25px;
-
-  background-color: $white-primary-color;
-  opacity: 1;
-  visibility: visible;
-
-  transition: opacity $primary-animation, visibility $primary-animation;
-
-  @media screen and (min-width: $container-width-tablet) {
-    display: none;
-  }
-}
-
-.page-header__mobile-menu.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.page-header__menu-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-}
