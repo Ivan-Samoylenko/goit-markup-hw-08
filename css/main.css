@@ -926,6 +926,7 @@ svg {
 
 .backdrop {
   position: fixed;
+  z-index: 50;
   top: 0;
   left: 0;
   min-width: 320px;
@@ -1232,11 +1233,16 @@ svg {
 
 .portfolio__image-thumb {
   position: relative;
+  width: 100%;
+  height: 294px;
   overflow: hidden;
 }
 
 .portfolio__image {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio__image-text {
@@ -1289,6 +1295,7 @@ svg {
 
 .mobile-menu {
   position: fixed;
+  z-index: 50;
   top: 0;
   left: 0;
   -webkit-transform: translateX(0);
@@ -1323,14 +1330,14 @@ svg {
   pointer-events: none;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 520px) {
   .mobile-menu.is-hidden {
     -webkit-transform: translateX(100vw);
             transform: translateX(100vw);
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 521px) {
   .mobile-menu.is-hidden {
     -webkit-transform: translateY(-100vh);
             transform: translateY(-100vh);
