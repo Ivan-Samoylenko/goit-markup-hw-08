@@ -87,14 +87,13 @@
   color: $grey-primary-color;
 
   &--big {
+    font-size: 28px;
+
     color: $accent-color;
-    @media screen and (min-width: 330px) and (max-width: 369px) {
-      font-size: 26px;
+    @media screen and (min-width: 321px) and (max-width: 379px) {
+      font-size: calc(10vw - 4px);
     }
-    @media screen and (min-width: 370px) and (max-width: 406px) {
-      font-size: 30px;
-    }
-    @media screen and (min-width: 407px) {
+    @media screen and (min-width: 380px) {
       font-size: 34px;
     }
   }
